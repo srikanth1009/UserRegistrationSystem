@@ -21,4 +21,21 @@ public class UserRegistration {
         else
             System.out.println("First name is !Invalid");
     }
+    /*
+    Created a method to validate last name
+     */
+    public static void validLastName(){
+        System.out.println("Enter the Last Name");
+        String lname = scanner.next();
+
+        String regex1 = "^[A-Z]{1}[a-z]{2,}$";
+
+        Pattern p1 = Pattern.compile(regex1);
+        Matcher m1 = p1.matcher(lname);
+        boolean r1 = m1.matches();
+        if (r1)
+            System.out.println("Last name is Valid");
+        else
+            System.out.println("Last name is Invalid");
+    }
 }
